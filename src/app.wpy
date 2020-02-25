@@ -1,0 +1,87 @@
+<style lang="less">
+  @import "weui.wxss";
+  @import "bootstrap.wxss";
+  @import "./components/vant/common/index.wxss";
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  page{
+    background-color: #f7f7f7;
+    font-size: 36rpx;
+  }
+  .text-primary{
+    color: #09bb07 !important;
+  }
+
+  .fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+</style>
+
+<script>
+import wepy from 'wepy'
+
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      'pages/compound',
+      'pages/index',
+      'pages/installment',
+      'pages/investmentChart',
+      'pages/houseModel',
+      'pages/more',
+    ],
+    window: {
+      navigationBarTitleText: '计算器',
+      navigationBarTextStyle: 'black',
+      navigationBarBackgroundColor:'#f7f7f7',
+      backgroundColor:'#f7f7f7'
+    },
+    usingComponents: {
+      "van-button": "./components/vant/button/index",
+      "van-cell": "./components/vant/cell/index",
+      "van-cell-group": "./components/vant/cell-group/index",
+      "van-field": "./components/vant/field/index",
+      "van-icon": "./components/vant/icon/index",
+      "van-panel": "./components/vant/panel/index",
+      "fuli-cell": "./components/customer/cell/index",
+      "i-panel": "./components/i-view/panel/index"
+    },
+    tabBar:{
+      color:'#353535',
+      selectedColor:'#09bb07',
+      backgroundColor:'#FAFAFA',
+      list: [
+        {
+          pagePath: "pages/compound",
+          text: "复利计算",
+          iconPath:'./images/oneMoney.png',
+          selectedIconPath:'./images/oneMoneySelect.png'
+        },
+        {
+          pagePath: "pages/index",
+          text: "定投计算",
+          iconPath:'./images/moreMoney.png',
+          selectedIconPath:'./images/moreMoneySelect.png'
+        },{
+          pagePath: "pages/more",
+          text: "更多",
+          iconPath:'./images/more.png',
+          selectedIconPath:'./images/moreSelect.png'
+        }
+      ]
+    },
+  }
+}
+</script>
