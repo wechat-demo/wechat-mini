@@ -1,7 +1,7 @@
-node_modules
-dist
-.DS_Store
-*.wpy___jb_tmp___
-.idea/
-.wepycache
-/lib/
+eighthWonder/node_modules
+eighthWonder/dist
+eighthWonder/.DS_Store
+eighthWonder/*.wpy___jb_tmp___
+eighthWonder/.idea/
+eighthWonder/.wepycache
+eighthWonder/lib/
